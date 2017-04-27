@@ -485,7 +485,7 @@ public class BeaconService extends Service {
                 if (!mCycledScanner.getDistinctPacketsDetectedPerScan()) {
                     if (!mDistinctPacketDetector.isPacketDistinct(scanData.device.getAddress(),
                             scanData.scanRecord)) {
-                        LogManager.i(TAG, "Non-distinct packets detected in a single scan.  Restarting scans unecessary.");
+                        LogManager.i(TAG, "Non-distinct packets detected in a single scan.  Restarting scans unnecessary.");
                         mCycledScanner.setDistinctPacketsDetectedPerScan(true);
                     }
                 }
