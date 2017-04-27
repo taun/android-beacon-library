@@ -2,6 +2,21 @@
 
 Enhancements:
 
+- TODO
+
+Bug Fixes:
+
+- TODO
+
+
+### 2.10 / 2017-04-21
+
+[Full Changelog](https://github.com/AltBeacon/android-beacon-library/compare/2.9.2...2.10)
+
+### Development
+
+Enhancements:
+
 - Don't restart BLE scanning periodically if the library confrims device can detect duplicate
   advertisements in a single scan, leading to more reliable detections with short scan cycles
   (#491, David G. Young)
