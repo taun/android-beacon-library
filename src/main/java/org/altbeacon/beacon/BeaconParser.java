@@ -16,6 +16,8 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static org.altbeacon.bluetooth.Pdu.GATT_SERVICECORE_UUID_PDU_TYPE;
+
 /**
  * Created by dyoung on 7/21/14.
  *
@@ -428,7 +430,8 @@ public class BeaconParser implements Serializable {
 
         for (Pdu pdu: advert.getPdus()) {
             if (pdu.getType() == Pdu.GATT_SERVICE_UUID_PDU_TYPE ||
-                    pdu.getType() == Pdu.MANUFACTURER_DATA_PDU_TYPE) {
+                    pdu.getType() == Pdu.MANUFACTURER_DATA_PDU_TYPE ||
+                    pdu.getType() == GATT_SERVICECORE_UUID_PDU_TYPE) {
                 pduToParse = pdu;
                 if (LogManager.isVerboseLoggingEnabled()) {
                     LogManager.d(TAG, "Processing pdu type %02X: %s with startIndex: %d, endIndex: %d", pdu.getType(), bytesToHex(bytesToProcess), pdu.getStartIndex(), pdu.getEndIndex());
